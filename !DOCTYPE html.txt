@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Présentation GitHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+  <style>
+    .reveal h1, .reveal h2 { color: #58a6ff; text-transform: none; }
+    .reveal ul { font-size: 0.85em; line-height: 1.6; }
+    .badge { background: #1f6feb; padding: 2px 10px; border-radius: 6px; font-size: 0.7em; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.8em; text-align: left; }
+    .box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1 : Titre -->
+      <section>
+        <h1>Comprendre Git & GitHub</h1>
+        <p>Gestion de versions et hébergement collaboratif</p>
+        <span class="badge">Présentation Technique</span>
+      </section>
+
+      <!-- Slide 2 : Problématique -->
+      <section>
+        <h2>Pourquoi Git & GitHub ?</h2>
+        <ul>
+          <li><strong>Le problème classique :</strong> des dossiers avec <code>projet_v1</code>, <code>projet_final</code>, <code>projet_v2_corrige</code>.</li>
+          <li><strong>Le risque :</strong> pertes de code, écrasements involontaires, travail à plusieurs difficile.</li>
+          <li><strong>La solution :</strong> un historique rigoureux, chaque changement est tracé et réversible.</li>
+        </ul>
+      </section>
+
+      <!-- Slide 3 : Git vs GitHub -->
+      <section>
+        <h2>Git vs GitHub : la distinction</h2>
+        <div class="grid">
+          <div class="box">
+            <h3 style="color:#58a6ff;">Git</h3>
+            <p><strong>L'outil local (moteur)</strong></p>
+            <ul>
+              <li>Logiciel libre installé sur la machine</li>
+              <li>Enregistre l'historique des modifications</li>
+              <li>Fonctionne hors-ligne</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3 style="color:#58a6ff;">GitHub</h3>
+            <p><strong>Le service distant (cloud)</strong></p>
+            <ul>
+              <li>Plateforme web hébergeant les dépôts Git</li>
+              <li>Interface graphique et partage</li>
+              <li>Fonctionnalités : Issues, Pull Requests, Pages</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4 : Notions clés -->
+      <section>
+        <h2>Le vocabulaire indispensable</h2>
+        <ul>
+          <li><strong>Repository (Dépôt) :</strong> dossier central du projet contenant fichiers et historique.</li>
+          <li><strong>Commit :</strong> capture instantanée (point de sauvegarde) du code validé.</li>
+          <li><strong>Branch (Branche) :</strong> ligne de travail parallèle pour tester sans casser la branche principale (<code>main</code>).</li>
+          <li><strong>Pull Request :</strong> proposition de fusionner une branche après vérification.</li>
+        </ul>
+      </section>
+
+      <!-- Slide 5 : Cas d'usage Infrastructure / Réseau -->
+      <section>
+        <h2>Utilité en Systèmes & Réseaux</h2>
+        <ul>
+          <li><strong>Traçabilité :</strong> versionner des scripts (Bash, PowerShell, Python).</li>
+          <li><strong>Documentation :</strong> hébergement des documentations techniques (fichiers Markdown).</li>
+          <li><strong>GitHub Pages :</strong> déploiement gratuit de sites et portfolios en HTTPS.</li>
+        </ul>
+      </section>
+
+      <!-- Slide 6 : Conclusion -->
+      <section>
+        <h2>Conclusion</h2>
+        <p>Un standard du secteur informatique pour collaborer proprement et sécuriser son travail.</p>
+        <p style="font-size: 0.8em; color: #8b949e;">Utilisez les flèches du clavier pour naviguer</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true
+    });
+  </script>
+</body>
+</html>
