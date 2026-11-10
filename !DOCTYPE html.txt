@@ -1,101 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Présentation GitHub</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — BTS SIO SISR</title>
   <style>
-    .reveal h1, .reveal h2 { color: #58a6ff; text-transform: none; }
-    .reveal ul { font-size: 0.85em; line-height: 1.6; }
-    .badge { background: #1f6feb; padding: 2px 10px; border-radius: 6px; font-size: 0.7em; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.8em; text-align: left; }
-    .box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; }
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --tag-bg: #f1f5f9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-title { font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    main { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 35px 30px;
+      margin-bottom: 30px;
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 8px; color: var(--text); }
+    .subtitle { font-size: 1.05rem; color: var(--primary); font-weight: 600; margin-bottom: 16px; }
+    p { margin-bottom: 14px; color: var(--muted); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 30px;
+      margin-bottom: 24px;
+    }
+    h2 { font-size: 1.3rem; margin-bottom: 16px; color: var(--text); border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .btn:hover { background: var(--primary-hover); }
+    footer { text-align: center; padding: 30px 20px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
 
-      <!-- Slide 1 : Titre -->
-      <section>
-        <h1>Comprendre Git & GitHub</h1>
-        <p>Gestion de versions et hébergement collaboratif</p>
-        <span class="badge">Présentation Technique</span>
-      </section>
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-title">BTS SIO SISR</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="projets.html">Projets 1ère Année</a>
+      <a href="synthese.html">Tableau de Synthèse</a>
+    </div>
+  </div>
+</nav>
 
-      <!-- Slide 2 : Problématique -->
-      <section>
-        <h2>Pourquoi Git & GitHub ?</h2>
-        <ul>
-          <li><strong>Le problème classique :</strong> des dossiers avec <code>projet_v1</code>, <code>projet_final</code>, <code>projet_v2_corrige</code>.</li>
-          <li><strong>Le risque :</strong> pertes de code, écrasements involontaires, travail à plusieurs difficile.</li>
-          <li><strong>La solution :</strong> un historique rigoureux, chaque changement est tracé et réversible.</li>
-        </ul>
-      </section>
+<main>
+  <div class="hero">
+    <h1>Portfolio Professionnel</h1>
+    <div class="subtitle">Solutions d'Infrastructure, Systèmes et Réseaux (SISR)</div>
+    <p>Étudiante en 2ème année de BTS Services Informatiques aux Organisations, je documente sur cet espace les réalisations techniques et les compétences développées lors de ma formation et de mes périodes en milieu professionnel.</p>
+    <p>Ce dossier s'articule autour de l'administration système, du déploiement de postes, du routage et de la commutation réseau, ainsi que du support aux usagers.</p>
+    <a href="projets.html" class="btn">Consulter les réalisations de 1ère année &rarr;</a>
+  </div>
 
-      <!-- Slide 3 : Git vs GitHub -->
-      <section>
-        <h2>Git vs GitHub : la distinction</h2>
-        <div class="grid">
-          <div class="box">
-            <h3 style="color:#58a6ff;">Git</h3>
-            <p><strong>L'outil local (moteur)</strong></p>
-            <ul>
-              <li>Logiciel libre installé sur la machine</li>
-              <li>Enregistre l'historique des modifications</li>
-              <li>Fonctionne hors-ligne</li>
-            </ul>
-          </div>
-          <div class="box">
-            <h3 style="color:#58a6ff;">GitHub</h3>
-            <p><strong>Le service distant (cloud)</strong></p>
-            <ul>
-              <li>Plateforme web hébergeant les dépôts Git</li>
-              <li>Interface graphique et partage</li>
-              <li>Fonctionnalités : Issues, Pull Requests, Pages</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 4 : Notions clés -->
-      <section>
-        <h2>Le vocabulaire indispensable</h2>
-        <ul>
-          <li><strong>Repository (Dépôt) :</strong> dossier central du projet contenant fichiers et historique.</li>
-          <li><strong>Commit :</strong> capture instantanée (point de sauvegarde) du code validé.</li>
-          <li><strong>Branch (Branche) :</strong> ligne de travail parallèle pour tester sans casser la branche principale (<code>main</code>).</li>
-          <li><strong>Pull Request :</strong> proposition de fusionner une branche après vérification.</li>
-        </ul>
-      </section>
-
-      <!-- Slide 5 : Cas d'usage Infrastructure / Réseau -->
-      <section>
-        <h2>Utilité en Systèmes & Réseaux</h2>
-        <ul>
-          <li><strong>Traçabilité :</strong> versionner des scripts (Bash, PowerShell, Python).</li>
-          <li><strong>Documentation :</strong> hébergement des documentations techniques (fichiers Markdown).</li>
-          <li><strong>GitHub Pages :</strong> déploiement gratuit de sites et portfolios en HTTPS.</li>
-        </ul>
-      </section>
-
-      <!-- Slide 6 : Conclusion -->
-      <section>
-        <h2>Conclusion</h2>
-        <p>Un standard du secteur informatique pour collaborer proprement et sécuriser son travail.</p>
-        <p style="font-size: 0.8em; color: #8b949e;">Utilisez les flèches du clavier pour naviguer</p>
-      </section>
-
+  <div class="card">
+    <h2>Environnements & Outils Pratiqués</h2>
+    <p>Outils, systèmes d'exploitation et protocoles exploités en cours et en situation professionnelle :</p>
+    <div class="tags">
+      <span class="tag">Linux Debian</span>
+      <span class="tag">Windows Server / Client</span>
+      <span class="tag">Cisco IOS</span>
+      <span class="tag">Cisco Packet Tracer</span>
+      <span class="tag">Proxmox VE</span>
+      <span class="tag">VLAN & Trunking 802.1Q</span>
+      <span class="tag">Spanning Tree (STP/RSTP)</span>
+      <span class="tag">EtherChannel (LACP/PAgP)</span>
+      <span class="tag">NAT / PAT</span>
+      <span class="tag">Routage RIPv2</span>
+      <span class="tag">Déploiement PXE / TFTP</span>
+      <span class="tag">Console NEOS</span>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true
-    });
-  </script>
+  <div class="card">
+    <h2>Organisation du Dossier</h2>
+    <p>Le site est découpé en deux volets principaux :</p>
+    <ul>
+      <li style="margin-bottom: 8px; margin-left: 20px; color: var(--muted);"><strong><a href="projets.html" style="color: var(--primary); text-decoration: none;">Projets 1ère Année :</a></strong> fiches techniques détaillant le contexte, les actions menées et les résultats obtenus lors de mon stage à la Médiathèque Colette et des travaux d'infrastructure réseau.</li>
+      <li style="margin-left: 20px; color: var(--muted);"><strong><a href="synthese.html" style="color: var(--primary); text-decoration: none;">Tableau de Synthèse :</a></strong> grille de correspondance avec les compétences du référentiel des épreuves E4 et E5 du BTS SIO.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  Portfolio BTS SIO — Option Solutions d'Infrastructure, Systèmes et Réseaux
+</footer>
+
 </body>
 </html>
